@@ -24,5 +24,3 @@ RUN mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default
 ADD app.conf /etc/nginx/conf.d/app.conf
 ADD nginx.conf /etc/nginx/
 ADD nginx.ini /etc/supervisord.d/
-# fix the system locale as needed by hhvm
-RUN echo 'LANG=C' > /etc/sysconfig/i18n
