@@ -17,6 +17,10 @@ RUN ln -s /usr/bin/hhvm /usr/bin/php
 # add hhvm files
 ADD hhvm.conf /etc/nginx/
 ADD hhvm.ini /etc/supervisord.d/
+# install composer
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/local/bin/composer
+RUN chmod +x /usr/local/bin/composer
 # setup nginx
 RUN mkdir /var/www
 RUN chown -R nginx:nginx /var/www

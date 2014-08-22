@@ -9,6 +9,9 @@ so all of the features are available here as well.
 - In your laravel project directory: `docker run -p -d 80:80 -v $(pwd):/var/www/app vinelab/hhvm`
 - visit `http://localhost` and you should get to your app
 
+#### Composer
+[Composer](http://getcomposer.org) is installed in `/usr/local/bin/composer` so you can use it right away.
+
 ### Custom Configuration
 
 - To add a virtual host configuration file to nginx mount a file with `.conf` extension to
